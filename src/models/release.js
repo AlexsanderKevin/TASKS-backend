@@ -1,5 +1,7 @@
 import { Sequelize } from "sequelize"
 import database from "../../database.js"
+import Project from "./project.js"
+import Sprint from "./sprint.js"
 
 const Release = database.define('releases', {
     id: {
@@ -13,5 +15,7 @@ const Release = database.define('releases', {
         allowNull: false,
     }
 })
+
+Release.hasMany( Sprint )
 
 export default Release

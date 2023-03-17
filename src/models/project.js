@@ -1,5 +1,6 @@
 import { Sequelize } from "sequelize"
 import database from '../../database.js'
+import Release from './release.js'
 
 const Project = database.define('projects', {
     id: {
@@ -13,5 +14,7 @@ const Project = database.define('projects', {
         allowNull: false,
     }
 })
+
+Project.hasMany( Release )
 
 export default Project

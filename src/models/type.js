@@ -1,5 +1,6 @@
 import { Sequelize } from "sequelize"
 import database from "../../database.js"
+import Task from "./task.js"
 
 const Type = database.define('types', {
     id: {
