@@ -1,7 +1,7 @@
 {
-  "name": "express-sqlite-api",
+  "name": "tasks-backend",
   "version": "1.0.0",
-  "description": "this is a template to build a REST API using node Express and SQLite as database",
+  "description": "",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -14,8 +14,7 @@
     "API",
     "NODE",
     "EXPRESS",
-    "SQLITE",
-    "TEMPLATE"
+    "SQLITE"
   ],
   "author": "Kevin Alexsander de Jesus",
   "license": "ISC",

@@ -17,7 +17,9 @@ const UserController = {
     } 
     catch ( error ) {
       console.log( error )
-      return res.status( 500 ).json({ message: 'Internal server error' })
+      return res
+        .status( 500 )
+        .json({ message: 'Internal server error' })
     }
   },
 
