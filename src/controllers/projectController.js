@@ -16,7 +16,9 @@ const ProjectController = {
 
         try {
             const newProject = await Project.create( projectDTO )
-            return res.status( 201 ).json( newProject )
+            return res
+                .status( 201 )
+                .json( newProject )
         }
         catch ( error ) { return sendError( res, error )}
     },
@@ -34,7 +36,29 @@ const ProjectController = {
     },
 
     updateProject: async ( req, res ) => {
-        
+        const { id } = req.params
+        const { name } = req.body
+        const projectDTO = { name }
+
+        try {
+            const updatedProject = await Project.update( projectDTO, { where: {id} })
+            return res
+                .status( 204 )
+                .json( updatedProject )
+        }
+        catch ( error ) { return sendError( res, erro ) }
+    },
+
+    deleteProject: async ( req, res ) => {
+        const { id } = req.params
+
+        try {
+            const deletedProject = await Project.destroy({ where: {id} })
+            return res
+                .status( 204 )
+                .json( deletedProject )
+        }
+        catch ( error ) { return sendError( res, error )}
     }
 }
 
